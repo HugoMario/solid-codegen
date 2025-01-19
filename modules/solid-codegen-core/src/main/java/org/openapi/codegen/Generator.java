@@ -1,0 +1,13 @@
+package org.openapi.codegen;
+
+import java.io.File;
+import java.util.List;
+import java.util.Map;
+
+public interface Generator {
+    Generator opts(ClientOptInput opts);
+
+    List<File> generate();
+    Map<String, Object> generateBundle();
+    String renderTemplate(String template, String context);
+}
